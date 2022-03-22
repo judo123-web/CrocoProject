@@ -1,0 +1,153 @@
+.main {
+    width: 100vw;
+    height: 100%;
+    background-image: url("https://www.freshconsulting.com/wp-content/uploads/fly-images/813/IA_hero-01-1024x1024.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        background-color: black;
+        /* or add it to the track */
+    }
+    /* Add a thumb */
+    &::-webkit-scrollbar-thumb {
+        background: white;
+    }
+
+    .buttons {
+        position: sticky;
+        top: 0px;
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        z-index: 2;
+        margin-top: 20px;
+        background-color: #343c66;
+        padding: 10px  0px 5px 0;
+        min-height: 55px !important;
+        
+
+
+        .croco {
+            width: 100px;
+            background-image: url("../../assets/croco.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .content {
+
+    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
+        box-sizing: border-box;
+        padding-top: 70px;
+        padding-bottom: 40px;
+
+    
+
+    
+        .single_item {
+            // border: 1px solid red;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 2px solid green;
+            padding-left: 15px;
+            height: 50px;
+            width: 110%;
+            
+            i {
+                color: white;
+            }
+            p {
+                margin: 0px;
+                font-size: 1.25rem;
+                color: #00ff39;
+                font-weight: 400;
+                display: flex;
+                justify-content: flex-start;
+                gap: 20px;
+                span {
+                    color: #f0cc9d;
+                }
+                
+                &>:last-child {
+                    
+                }
+            }
+        }
+    
+        .left-side {
+            width: 384px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px;
+            gap: 20px;
+
+            #profile {
+                width: 100%;
+                height: 300px;
+                background-image: url("../../assets/profile.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-radius: 20px;
+            }
+    
+    
+        }
+    
+        .right-side {
+            width: 384px;
+    
+            .address {
+                display: flex;
+                flex-direction: column;
+    
+                h3 {
+                    text-align: center;
+                    color: #00ff39;
+                }
+                h4 {
+                    color: brown;
+                    text-align: center;
+                    margin-top: 30px;
+                    border-bottom: 1px solid brown;
+                    width: 110%;
+                }
+            
+                
+            }
+    
+            .company {
+                h3 {
+                    margin-top: 40px;
+                    text-align: center;
+                    color: white;
+                }
+    
+                .single_item {
+                    p {
+                        color: white;
+                    }
+                }
+            }
+        }
+    
+    }
+}

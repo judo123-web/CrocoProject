@@ -1,1 +1,92 @@
-<p>user-information works!</p>
+<div class="main">
+
+    <div class="buttons">
+        <div class="croco"></div>
+        <button type="button" [routerLink]="['/users']" class="btn btn-light">Users</button>
+        <button type="button" [routerLink]="['/user-posts', user.id]" class="btn btn-warning">User Posts</button>
+
+    </div>
+
+    <div class="content">
+
+        <div class="left-side">
+            <div id="profile"></div>
+            <div class="single_item">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <p>Name : <span>{{user.name}}</span></p>
+            </div>
+            <div class="single_item">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <p>UserName <span>{{user.username}}</span></p>
+            </div>
+            <div class="single_item">
+                <i class="fa-solid fa-envelope-circle-check"></i>
+                <p>Email <span>{{user.email}}</span></p>
+            </div>
+            <div class="single_item">
+                <i class="fa-solid fa-phone"></i>
+                <p>Phone <span>{{user.phone}}</span></p>
+            </div>
+            <div class="single_item">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/590/557/small/sphere-browser-line-style-icon-free-vector.jpg"
+                    style="width: 25px; height: 25px;" alt="">
+                <p style="transform:translateX(-8px);">website <span>{{user.website}}</span></p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="address">
+                <h3>Address</h3>
+                <div class="single_item">
+                    <i class="fa-solid fa-street-view"></i>
+                    <p>Street : <span>{{user?.address?.street}}</span></p>
+                </div>
+
+                <div class="single_item">
+                    <i class="fa-solid fa-diamond"></i>
+                    <p>Suite : <span>{{user?.address?.suite}}</span></p>
+                </div>
+
+                <div class="single_item">
+                    <i class="fa-solid fa-city"></i>
+                    <p>City : <span>{{user?.address?.city}}</span></p>
+                </div>
+
+                <div class="single_item">
+                    <i class="fa-solid fa-code-commit"></i>
+                    <p>Zipcode : <span>{{user?.address?.zipcode}}</span></p>
+                </div>
+
+                <h4>Geo</h4>
+
+                <div class="single_item" style="border-bottom: 1px solid brown;">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <p style="color: brown;">lat : <span>{{user?.address?.geo?.lat}}</span></p>
+                </div>
+                <div class="single_item" style="border-bottom: 1px solid brown;">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <p style="color: brown;">lng : <span>{{user?.address?.geo?.lng}}</span></p>
+                </div>
+            </div>
+
+            <div class="company">
+                <h3>Company</h3>
+                <div class="single_item">
+                    <i class="fa-solid fa-street-view"></i>
+                    <p>Name : <span>{{user?.company?.name}}</span></p>
+                </div>
+
+                <div class="single_item">
+                    <i class="fa-solid fa-diamond"></i>
+                    <p style="font-size: 17px; align-items: center;">CatchPhrase: <span
+                            style="font-size: 15px;">{{user?.company?.catchPhrase}}</span></p>
+                </div>
+
+                <div class="single_item">
+                    <i class="fa-solid fa-city"></i>
+                    <p>BS: <span>{{user?.company?.bs}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
