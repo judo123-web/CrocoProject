@@ -1,1 +1,17 @@
-<p>user-posts works!</p>
+<main>
+    <div class="buttons">
+        <div class="croco"></div>
+        <button type="button" [routerLink]="['/users']" class="btn btn-light">Users</button>
+        <button type="button" [routerLink]="['/user-inforation', userId]" class="btn btn-warning">User
+            Info</button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let post of posts" class="card">
+                <h4>{{post.title}}</h4>
+                <p>{{post.body}}</p>
+            </div>
+        </div>
+    </div>
+</main>
