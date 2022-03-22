@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/users_page_images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    object-fit: cover;
+
+    h1 {
+        margin-top: 10px;
+        text-align: center;
+        color:  #d2ffff;
+        text-shadow: 1px 0px white,-1px 0px white,0px 1px white,0px -1px white;
+    }
+
+    .user_buttons {
+        padding: 80px 15%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        
+        button {
+            height: 35px;
+            font-size: 1rem;
+            border-radius: 10px;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        button:hover {
+            color: yellow;
+        }
+    }
+
+    .bubbles {
+        position: absolute;
+        width: 100vw;
+        bottom: 0px;
+        display: flex;
+        justify-content: space-around;
+
+        .bubble {
+            width: 50px;
+            height: 50px;
+            background-image: url("../../assets/users_page_images/bubble.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            animation: bubble_animation 7s linear infinite;
+            opacity: 0;
+
+            &:nth-child(1) {
+                width: 20px;
+                height: 20px;
+                animation-delay: 2s;
+            }
+            &:nth-child(2) {
+                animation-delay: 1s;
+            }
+            &:nth-child(3) {
+                width: 30px;
+                height: 30px;
+                animation-delay: 3s;
+            }
+            &:nth-child(4) {
+                width: 60px;
+                height: 60px;
+                animation-delay: 4.5s;
+            }
+            &:nth-child(5) {
+                animation-delay: 3s;
+            }
+            &:nth-child(6) {
+                width: 40px;
+                height: 40px;
+                animation-delay: 6s;
+            }
+            &:nth-child(7) {
+                animation-delay: 7s;
+            }
+        }
+
+        @keyframes bubble_animation {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            70% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-60vh);
+                opacity: 1;
+            }
+        }
+        
+    }
+}
